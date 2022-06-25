@@ -1,0 +1,12 @@
+{% extends "kayla_index.html" %}
+{% block body %}
+<form method = "post" action="/api/timeline_post">
+    <label for="name">Name:</label>
+    <input type="'text" name="name">
+    <label for="email">Email:</label>
+    <input type="'text" name="email">
+    <label for="content">Content:</label>
+    <input type="'text" name="content">
+    <button type="submit">Send Post Request</button>
+</form>
+{% endblock %} 
