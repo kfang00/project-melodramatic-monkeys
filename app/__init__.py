@@ -81,9 +81,6 @@ def kayla_hobbies():
 def kayla_places():
     return render_template('kayla_places.html', url=os.getenv("URL"))
 
-@app.route('/api')
-def timeline():
-    return render_template('timeline.html', url=os.getenv("URL"))
 
 @app.route('/api/timeline_post', methods=['POST'])
 def post_time_line_post():
@@ -103,6 +100,14 @@ def get_time_line_post():
         ]
     }
     
+@app.route('/timeline')
+def timeline():
+    return render_template('timeline.html', title = "Timeline", posts = get_time_line_post()['timeline_posts'], url=os.getenv("URL"))
+
+@app.route('/timeline', methods=['POST'])
+def timeline_post():
+    post_time_line_post()
+    return render_template('timeline.html', title = "Timeline", posts = get_time_line_post()['timeline_posts'], url=os.getenv("URL"))
 
 @app.route('/api/timeline_post', methods=['DELETE'])
 def delete_time_line_post():

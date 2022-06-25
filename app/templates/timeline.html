@@ -1,12 +1,37 @@
 {% extends "kayla_index.html" %}
 {% block body %}
-<form method = "post" action="/api/timeline_post">
-    <label for="name">Name:</label>
-    <input type="'text" name="name">
-    <label for="email">Email:</label>
-    <input type="'text" name="email">
-    <label for="content">Content:</label>
-    <input type="'text" name="content">
-    <button type="submit">Send Post Request</button>
-</form>
+<div id = "timeline-body">
+    <h1 id="timeline-header">{{title}}</h1>
+    <h2 id="timeline-direction">Add a new timeline post!</h2>
+    <form method = "post" action="/timeline" id = "timeline-form">
+        <label for="name" class="timeline-label">Name:</label>
+        <input type="'text" name="name" class="timeline-input">
+        <label for="email" class="timeline-label">Email:</label>
+        <input type="'text" name="email" class="timeline-input">
+        <label for="content" class="timeline-label">Content:</label>
+        <input type="'text" name="content" class="timeline-input">
+        <button type="submit" id = "timeline-post-button">Send Post Request</button>
+    </form>
+    <div id = "timeline-posts">
+    {% for post in posts %}
+        <div class="timeline-post">
+            <div class="timeline-post-top">
+                <p>Id: {{post.id}}</p>
+                <p>{{post.created_at}}</p>
+            </div>
+            <!-- <h3>Created At</h3> -->
+            
+            <!-- <h3>Name</h3> -->
+            <h2 class="timeline-post-name">{{post.name}}</h2>
+            <div class="timeline-post-bottom">
+                <h3>Email</h3>
+                <p>{{post.email}}</p>
+                <h3>Content</h3>
+                <p>{{post.content}}</p>
+            </div>
+            
+        </div>
+    {% endfor %}
+    </div>
+</div>
 {% endblock %} 

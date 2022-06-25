@@ -1,0 +1,93 @@
+#timeline-body {
+    color: white;
+}
+
+#timeline-header {
+    text-align: center;;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    padding: 10px;
+    font-size: 1.7em;
+}
+
+#timeline-direction {
+    text-align: center;;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#timeline-form {
+    text-align: center;
+}
+
+.timeline-label {
+    margin: 10px;
+}
+
+.timeline-input {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+}
+
+#timeline-post-button {
+    padding: 12px 20px;
+    color: white;
+    background-color: rgba(209, 108, 172, 0.926);
+    border-radius: 10px;
+    border: none;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    font-size: 0.8em;
+    margin: 10px;
+}
+
+#timeline-posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.timeline-post {
+    background-color: rgba(255, 255, 255, 0.92);
+    margin: 20px;
+    border-radius: 10px;
+    padding: 5px 15px;
+    width: 400px;
+}
+
+.timeline-post-top {
+    display: flex;
+    justify-content: space-between;
+    color:rgb(219, 74, 166);
+    font-size: 0.87em;
+}
+
+.timeline-post-name {
+    background-image: linear-gradient(45deg, rgba(78, 132, 212, 0.932),rgba(151, 72, 204, 0.933), rgba(207, 85, 162, 0.929));
+    padding: 6px 10px;
+    text-align: center;
+    border-radius: 10px;
+    letter-spacing: 0.06em;
+    font-weight: 500;
+    margin-top: 5px;
+    font-size: 1.3em;
+    margin-bottom: 5px;
+}
+
+.timeline-post-bottom {
+    display: grid;
+    grid-template-columns: 98px auto;
+    color: black;
+    font-size: 1em;
+}
+
+.timeline-post-bottom h3 {
+    color:rgba(78, 132, 212, 0.932);
+    /* letter-spacing: 0.05em; */
+    font-weight: 500;
+    padding: 0px 10px;
+    font-size: 1em;
+}
