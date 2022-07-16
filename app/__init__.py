@@ -34,7 +34,7 @@ class TimelinePost(Model):
 
 mydb.connect()
 mydb.create_tables([TimelinePost])
-mydb.close()
+# mydb.close()
 
 isKayla = True
 
@@ -113,7 +113,7 @@ def post_time_line_post():
         return "Invalid content",400
         
     timeline_post = TimelinePost.create(name=name, email=email, content=content)
-    mydb.close()
+    # mydb.close()
     return model_to_dict(timeline_post)
         
 
